@@ -11,7 +11,10 @@ GEM_EDITOR="${EDITOR}"
 CLICOLOR=1
 HISTSIZE=10000
 HISTCONTROL=ignoredups:erasedups
+
 GOPATH="${HOME}/go"
+
+LESS="-nFXR"
 
 # After each command, save and reload history
 PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
@@ -39,16 +42,17 @@ append_path "${GOPATH}/bin"
 prepend_path "${HOME}/bin"
 
 export \
-  EDITOR \
   CLICOLOR \
-  HISTSIZE \
-  HISTCONTROL \
-  PROMPT_COMMAND \
-  GOPATH \
+  EDITOR \
   FCEDIT \
-  VISUAL \
+  GEM_EDITOR \
   GIT_EDITOR \
-  GEM_EDITOR
+  GOPATH \
+  HISTCONTROL \
+  HISTSIZE \
+  LESS \
+  PROMPT_COMMAND \
+  VISUAL
 
 # Homebrew bash completion
 source $(brew --prefix)/etc/bash_completion

@@ -6,13 +6,7 @@ DIR="$( cd "$(dirname "$0" )" && pwd )"
 
 # Link dot files to $HOME
 for dotfile in $(find $DIR -maxdepth 1 -type f -name ".*"); do
-  if [[ $(uname) == 'Linux' && "$(basename $dotfile)" == '.tmux.linux.conf' ]]; then
-    ln -fs $dotfile "${HOME}/.tmux.conf"
-  elif [[ $(uname) == 'Darwin' && "$(basename $dotfile)" == '.tmux.osx.conf' ]]; then
-    ln -fs $dotfile "${HOME}/.tmux.conf"
-  elif [[ "$(basename $dotfile)" != ".tmux.osx.conf" && "$(basename $dotfile)" != ".tmux.linux.conf" ]]; then
-    ln -fs $dotfile "${HOME}/$(basename $dotfile)"
-  fi
+  ln -fs $dotfile "${HOME}/$(basename $dotfile)"
 done
 
 # Link rc files in .bashrc.d

@@ -18,12 +18,6 @@
     name: ~/.bashrc.d
     state: directory
 
-- name: Install bash path helpers
-  copy:
-    src: 00-path-helpers
-    dest: ~/.bashrc.d/00-path-helpers
-    mode: "0755"
-
 - name: Install configuration for environment
   copy:
     src: 10-environment

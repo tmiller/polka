@@ -1,0 +1,4 @@
+# -polka-
+
+source "$(brew --prefix chruby)/share/chruby/chruby.sh"
+chruby ruby

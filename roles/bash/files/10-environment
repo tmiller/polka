@@ -49,3 +49,6 @@ export \
   VISUAL \
   GIT_EDITOR \
   GEM_EDITOR
+
+# Homebrew bash completion
+source $(brew --prefix)/etc/bash_completion

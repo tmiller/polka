@@ -1,7 +1,14 @@
 ---
-- name: Install Bash
+- name: Install bash
   homebrew:
     name: bash
+    state: latest
+  tags:
+    - brew
+
+- name: Install bash-completion
+  homebrew:
+    name: bash-completion
     state: latest
   tags:
     - brew

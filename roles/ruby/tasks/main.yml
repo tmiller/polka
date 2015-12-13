@@ -1,0 +1,25 @@
+---
+- name: Install chruby
+  homebrew:
+    name: chruby
+    state: latest
+  tags:
+    - brew
+
+- name: Install ruby-install
+  homebrew:
+    name: ruby-install
+    state: latest
+  tags:
+    - brew
+
+- name: Install configuration for rubygems
+  copy:
+    src: gemrc
+    dest: ~/.gemrc
+
+- name: Install configuration for chruby
+  copy:
+    src: 30-load-ruby-manager
+    dest: ~/.bashrc.d/30-load-ruby-manager
+    mode: "0755"

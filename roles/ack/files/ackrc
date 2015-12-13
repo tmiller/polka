@@ -1,5 +1,9 @@
 # -polka-
 
+# General settings
+--pager=less -FXR
+
+# Custom Types
 --type-set=cucumber:ext:feature,feature_off
 --type-add=html:ext:haml,erb
 --type-add=ruby:ext:haml

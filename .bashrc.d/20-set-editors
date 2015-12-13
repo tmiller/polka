@@ -1,9 +1,0 @@
-# vim:set ft=sh sw=2 ts=2 expandtab:
-# -polka-
-
-VISUAL="$EDITOR"
-FCEDIT="$EDITOR"
-GIT_EDITOR="$EDITOR"
-GEM_EDITOR="$EDITOR"
-
-export FCEDIT VISUAL GIT_EDITOR GEM_EDITOR

@@ -1,0 +1,19 @@
+---
+- name: Install tmux
+  homebrew:
+    name: tmux
+    state: latest
+  tags:
+    - brew
+
+- name: Install reattach-to-user-namespace
+  homebrew:
+    name: reattach-to-user-namespace
+    state: latest
+  tags:
+    - brew
+
+- name: Install ~/.tmux.conf
+  copy:
+    src: tmux.conf
+    dest: ~/.tmux.conf

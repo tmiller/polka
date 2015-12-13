@@ -1,5 +1,0 @@
-# vim:set ft=sh sw=2 ts=2 expandtab:
-# -polka-
-
-LESS="-nFXR"
-export LESS

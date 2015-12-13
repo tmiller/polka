@@ -4,17 +4,24 @@
   connection: local
   gather_facts: false
   vars:
+    username: tmiller
+    home_dir: "/Users/{{ username }}"
     homebrew_packages:
       - ack
       - coreutils
       - ctags
+      - curl
       - jq
       - openssl
       - readline
       - tree
       - watch
+    git:
+      name: Tom Miller
+      email: tmiller@eab.com
 
   roles:
     - homebrew
     - bash
     - tmux
+    - git

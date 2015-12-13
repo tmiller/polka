@@ -1,0 +1,24 @@
+---
+- name: Install git
+  homebrew:
+    name: git
+    install_options: with-brewed-curl,with-brewed-openssl
+    state: latest
+  tags:
+    - brew
+
+- name: Install ~/.cvsignore
+  copy:
+    src: cvsignore
+    dest: ~/.cvsignore
+
+- name: Install ~/.gitconfig
+  template:
+    src: gitconfig.j2
+    dest: ~/.gitconfig
+
+- name: Install bash helpers for a git prompt
+  copy:
+    src: 00-git-helpers
+    dest: ~/.bashrc.d/00-git-helpers
+    mode: "0755"

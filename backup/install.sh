@@ -43,6 +43,3 @@ fi
 
 # Remove broken symlinks
 find -L "${HOME}" "${HOME}/.bashrc.d" "${HOME}/bin" "${HOME}/lib" "${HOME}/.vim/" -maxdepth 1 -type l | xargs rm 2>/dev/null
-
-# execute scripts on install
-(exec "${DIR}/bin/setup-gitconfig")

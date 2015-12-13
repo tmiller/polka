@@ -26,4 +26,4 @@
     - git
     - ack
     - vim
-    - chruby
+    - ruby

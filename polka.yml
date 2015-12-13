@@ -7,7 +7,6 @@
     username: tmiller
     home_dir: "/Users/{{ username }}"
     homebrew_packages:
-      - ack
       - coreutils
       - ctags
       - curl
@@ -25,3 +24,4 @@
     - bash
     - tmux
     - git
+    - ack

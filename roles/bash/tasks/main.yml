@@ -17,6 +17,12 @@
     dest: ~/.bashrc.d/00-path-helpers
     mode: "0755"
 
+- name: Install configuration for environment
+  copy:
+    src: 10-environment
+    dest: ~/.bashrc.d/10-environment
+    mode: "0755"
+
 - name: Install ~/.bashrc
   copy:
     src: bashrc

@@ -30,16 +30,5 @@ for file in ${DIR}/lib/*; do
     ln -fs $file "${HOME}/lib/$(basename $file)"
 done
 
-[ -d "${HOME}/.vim/bundle" ] || mkdir -p "${HOME}/.vim/bundle"
-[ -d "${HOME}/.vim/backups" ] || mkdir -p "${HOME}/.vim/backups"
-[ -d "${HOME}/.vim/swaps" ]   || mkdir -p "${HOME}/.vim/swaps"
-[ -d "${HOME}/.vim/undo" ]    || mkdir -p "${HOME}/.vim/undo"
-
-# Preload NeoBundle
-if [ ! -e "${HOME}/.vim/bundle/neobundle.vim" ]; then
-  echo "Installing NeoBundle..."
-  git clone "git://github.com/Shougo/neobundle.vim" "${HOME}/.vim/bundle/neobundle.vim" > "${HOME}/.vim/bundle/neobundle-install.log" 2>&1 &
-fi
-
 # Remove broken symlinks
 find -L "${HOME}" "${HOME}/.bashrc.d" "${HOME}/bin" "${HOME}/lib" "${HOME}/.vim/" -maxdepth 1 -type l | xargs rm 2>/dev/null

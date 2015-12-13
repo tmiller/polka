@@ -1,0 +1,37 @@
+---
+- name: Install Vim
+  homebrew:
+    name: vim
+    state: latest
+  tags:
+    - brew
+
+- name: Create Dirctory ~/.vim/bundle
+  file:
+    name: ~/.vim/bundle
+    state: directory
+
+- name: Create Dirctory ~/.vim/backups
+  file:
+    name: ~/.vim/backups
+    state: directory
+
+- name: Create Dirctory ~/.vim/swaps
+  file:
+    name: ~/.vim/swaps
+    state: directory
+
+- name: Create Dirctory ~/.vim/undo
+  file:
+    name: ~/.vim/undo
+    state: directory
+
+- name: Install NeoBundle for managing vim packages
+  git:
+    repo: https://github.com/Shougo/neobundle.vim.git 
+    dest: ~/.vim/bundle/neobundle.vim
+
+- name: Install ~/.vimrc
+  copy:
+    src: vimrc
+    dest: ~/.vimrc

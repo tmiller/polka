@@ -6,25 +6,15 @@
   tags:
     - brew
 
-- name: Create Dirctory ~/.vim/bundle
+- name: Create Directory
   file:
-    name: ~/.vim/bundle
+    name: "{{ item }}"
     state: directory
-
-- name: Create Dirctory ~/.vim/backups
-  file:
-    name: ~/.vim/backups
-    state: directory
-
-- name: Create Dirctory ~/.vim/swaps
-  file:
-    name: ~/.vim/swaps
-    state: directory
-
-- name: Create Dirctory ~/.vim/undo
-  file:
-    name: ~/.vim/undo
-    state: directory
+  with_items:
+    - ~/.vim/bundle
+    - ~/.vim/backups
+    - ~/.vim/swaps
+    - ~/.vim/undo
 
 - name: Install NeoBundle for managing vim packages
   git:

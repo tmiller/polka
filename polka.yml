@@ -5,6 +5,7 @@
   gather_facts: false
   vars:
     username: tmiller
+    go_version: "1.5.2"
     home_dir: "/Users/{{ username }}"
     homebrew_packages:
       - coreutils
@@ -24,6 +25,7 @@
     - bash
     - tmux
     - git
+    - go
     - ack
     - vim
     - ruby

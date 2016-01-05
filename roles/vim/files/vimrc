@@ -148,6 +148,3 @@ nnoremap <localleader>/ :nohlsearch<CR>
 
 " Trim trailing whitespace
 nnoremap <localleader>ws m`:%s/\s\+$//e<CR>``
-
-" Run Ruby test
-nnoremap <localleader>t :wa\|!ruby -Itest %<cr>

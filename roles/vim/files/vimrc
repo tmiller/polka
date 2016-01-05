@@ -116,7 +116,6 @@ set backspace=indent,eol,start
 
 " GUI options
 if (has('gui_running'))
-  set guifont=Inconsolata-dz:h12
   set guioptions-=T
   set guioptions-=m
 endif

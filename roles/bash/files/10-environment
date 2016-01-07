@@ -50,3 +50,6 @@ export \
 
 # Homebrew bash completion
 source $(brew --prefix)/etc/bash_completion
+
+# Vagrant
+export VAGRANT_DEFAULT_PROVIDER="virtualbox"

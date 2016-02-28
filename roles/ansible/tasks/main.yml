@@ -1,0 +1,7 @@
+---
+- name: Install ~/.ansible.cfg
+  copy:
+    src: ansible.cfg
+    dest: ~/.ansible.cfg
+  tags:
+    - ansible

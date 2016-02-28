@@ -68,3 +68,11 @@ if [ -e "${chruby_file}" ]; then
   source "${chruby_file}"
   chruby ruby
 fi
+
+# Python
+
+vew_file="$(brew --prefix)/bin/virtualenvwrapper.sh"
+if [ -e "${vew_file}" ]; then
+  export WORKON_HOME="${HOME}/.pyenvs"
+  source "${vew_file}"
+fi

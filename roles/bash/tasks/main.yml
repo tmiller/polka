@@ -4,6 +4,7 @@
     name: bash
     state: latest
   tags:
+    - bash
     - brew
 
 - name: Install bash-completion
@@ -11,25 +12,26 @@
     name: bash-completion
     state: latest
   tags:
+    - bash
     - brew
 
-- name: Create ~/.bashrc.d
+- name: Create ~/.autoload
   file:
-    name: ~/.bashrc.d
+    name: ~/.autoload
     state: directory
-
-- name: Install configuration for environment
-  copy:
-    src: 10-environment
-    dest: ~/.bashrc.d/10-environment
-    mode: "0755"
-
-- name: Install ~/.bashrc
-  copy:
-    src: bashrc
-    dest: ~/.bashrc
+  tags:
+    - bash
 
 - name: Install ~/.bash_profile
   copy:
     src: bash_profile
     dest: ~/.bash_profile
+  tags:
+    - bash
+
+- name: Install ~/.bashrc
+  copy:
+    src: bashrc
+    dest: ~/.bashrc
+  tags:
+    - bash

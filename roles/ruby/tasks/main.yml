@@ -17,9 +17,3 @@
   copy:
     src: gemrc
     dest: ~/.gemrc
-
-- name: Install configuration for chruby
-  copy:
-    src: 30-load-ruby-manager
-    dest: ~/.bashrc.d/30-load-ruby-manager
-    mode: "0755"

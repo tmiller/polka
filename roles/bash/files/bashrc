@@ -1,19 +1,66 @@
+# vim: set ft=sh sw=2 ts=2 expandtab
 # -polka-
 
-run_scripts()
-{
-    for script in $1/*; do
-        # skip non-executable snippets
-        [ -x "$script" ] || continue
+# Autoload Bash Libs
+for script in "${HOME}/.autoload/*"; do . $script; done
 
-        #execute $script in the context of the current shell
-        . $script
-    done
-}
+EDITOR="vim"
 
-load_bashrc()
-{
-    run_scripts "${HOME}/.bashrc.d"
-}
+VISUAL="${EDITOR}"
+FCEDIT="${EDITOR}"
+GIT_EDITOR="${EDITOR}"
+GEM_EDITOR="${EDITOR}"
 
-load_bashrc
+CLICOLOR=1
+HISTSIZE=10000
+HISTCONTROL=ignoredups:erasedups
+
+GOPATH="${HOME}/go"
+
+LESS="-nFXR"
+
+# After each command, save and reload history
+PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+
+# Better globbing in bash
+shopt -s globstar
+
+# Append history entries
+shopt -s histappend
+
+# Disable Ctrl-s suspend terminal
+stty -ixon
+
+# Set max files open for osx
+ulimit -n 65536
+
+[ -z "$PS1" ] || export PS1="\[\033[32m\]\u\[\033[0m\] \[\033[36m\]\w\[\033[0m\]\$(git_prompt_info ' \[\033[34m\]%b\[\033[0m\]')\n❯ "
+
+PATH="${HOME}/bin:$(brew --prefix)/bin:$(brew --prefix)/sbin:/usr/local/go/bin:${PATH}:$(brew --cellar)/python:${GOPATH}/bin"
+
+export \
+  CLICOLOR \
+  EDITOR \
+  FCEDIT \
+  GEM_EDITOR \
+  GIT_EDITOR \
+  GOPATH \
+  HISTCONTROL \
+  HISTSIZE \
+  LESS \
+  PROMPT_COMMAND \
+  VISUAL
+
+# Homebrew bash completion
+source $(brew --prefix)/etc/bash_completion
+
+# Vagrant
+export VAGRANT_DEFAULT_PROVIDER="virtualbox"
+
+########################
+# Programing Languages #
+########################
+
+#ruby
+source "$(brew --prefix chruby)/share/chruby/chruby.sh"
+chruby ruby

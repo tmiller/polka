@@ -19,6 +19,6 @@
 
 - name: Install bash helpers for a git prompt
   copy:
-    src: 00-git-helpers
-    dest: ~/.bashrc.d/00-git-helpers
-    mode: "0755"
+    src: git-helpers
+    dest: ~/.autoload/git-helpers
+    mode: '0755'

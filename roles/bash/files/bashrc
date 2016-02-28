@@ -2,7 +2,7 @@
 # -polka-
 
 # Autoload Bash Libs
-for script in "${HOME}/.autoload/*"; do . $script; done
+for script in "${HOME}/.autoload/*"; do source $script; done
 
 EDITOR="vim"
 

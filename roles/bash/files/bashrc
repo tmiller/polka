@@ -61,6 +61,10 @@ export VAGRANT_DEFAULT_PROVIDER="virtualbox"
 # Programing Languages #
 ########################
 
-#ruby
-source "$(brew --prefix chruby)/share/chruby/chruby.sh"
-chruby ruby
+# Ruby
+chruby_file="$(brew --prefix chruby)/share/chruby/chruby.sh"
+
+if [ -e "${chruby_file}" ]; then
+  source "${chruby_file}"
+  chruby ruby
+fi

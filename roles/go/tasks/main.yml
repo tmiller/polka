@@ -4,6 +4,7 @@
   command: cat /usr/local/go/VERSION
   register: current_go_version
   ignore_errors: yes
+  changed_when: False
   tags:
     - go
 

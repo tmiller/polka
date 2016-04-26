@@ -5,6 +5,7 @@
     state: latest
   tags:
     - brew
+    - vim
 
 - name: Create Directory
   file:
@@ -15,13 +16,19 @@
     - ~/.vim/backups
     - ~/.vim/swaps
     - ~/.vim/undo
+  tags:
+    - vim
 
 - name: Install NeoBundle for managing vim packages
   git:
     repo: https://github.com/Shougo/neobundle.vim.git 
     dest: ~/.vim/bundle/neobundle.vim
+  tags:
+    - vim
 
 - name: Install ~/.vimrc
   copy:
     src: vimrc
     dest: ~/.vimrc
+  tags:
+    - vim

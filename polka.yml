@@ -21,7 +21,7 @@
       email: tmiller@eab.com
 
   roles:
-    - homebrew
+    - package
     - bash
     - tmux
     - git

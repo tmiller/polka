@@ -5,7 +5,7 @@
     state: latest
   tags:
     - tmux
-    - brew
+    - pkg
 
 - name: Install reattach-to-user-namespace
   homebrew:
@@ -13,7 +13,7 @@
     state: latest
   tags:
     - tmux
-    - brew
+    - pkg
 
 - name: Install ~/.tmux.conf
   copy:

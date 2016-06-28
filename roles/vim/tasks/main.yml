@@ -4,7 +4,7 @@
     name: vim
     state: latest
   tags:
-    - brew
+    - pkg
     - vim
 
 - name: Create Directory

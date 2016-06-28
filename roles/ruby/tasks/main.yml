@@ -4,14 +4,14 @@
     name: chruby
     state: latest
   tags:
-    - brew
+    - pkg
 
 - name: Install ruby-install
   homebrew:
     name: ruby-install
     state: latest
   tags:
-    - brew
+    - pkg
 
 - name: Install configuration for rubygems
   copy:

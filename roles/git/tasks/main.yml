@@ -5,7 +5,7 @@
     install_options: with-brewed-curl,with-brewed-openssl
     state: latest
   tags:
-    - brew
+    - pkg
 
 - name: Install ~/.cvsignore
   copy:

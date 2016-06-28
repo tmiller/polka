@@ -4,7 +4,7 @@
     name: ack
     state: latest
   tags:
-    - brew
+    - pkg
 
 - name: Install ~/.ackrc
   copy:

@@ -5,7 +5,7 @@
     state: latest
   tags:
     - bash
-    - brew
+    - pkg
 
 - name: Install bash-completion
   homebrew:
@@ -13,7 +13,7 @@
     state: latest
   tags:
     - bash
-    - brew
+    - pkg
 
 - name: Create ~/.autoload
   file:

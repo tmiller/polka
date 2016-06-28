@@ -1,6 +1,7 @@
 ---
 - name: Setup Polka
-  hosts: localhost
+  hosts:
+    - localhost
   connection: local
   gather_facts: false
   vars:

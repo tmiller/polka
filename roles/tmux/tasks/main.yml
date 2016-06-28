@@ -4,6 +4,7 @@
     name: tmux
     state: latest
   tags:
+    - tmux
     - brew
 
 - name: Install reattach-to-user-namespace
@@ -11,9 +12,12 @@
     name: reattach-to-user-namespace
     state: latest
   tags:
+    - tmux
     - brew
 
 - name: Install ~/.tmux.conf
   copy:
     src: tmux.conf
     dest: ~/.tmux.conf
+  tags:
+    - tmux

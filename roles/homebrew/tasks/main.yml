@@ -1,9 +1,15 @@
 ---
+- name: Update Homebrew
+  homebrew:
+    update_homebrew: yes
+  tags:
+    - brew
+    - update
+
 - name: Install Packages
   homebrew:
     name: "{{ item }}"
     state: latest
-    update_homebrew: yes
   with_items: "{{ homebrew_packages }}"
   tags:
     - brew

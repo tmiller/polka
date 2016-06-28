@@ -1,6 +1,6 @@
 ---
 
-- name: Checking installed version of go
+- name: checking installed version of go
   command: cat /usr/local/go/VERSION
   register: current_go_version
   ignore_errors: yes
@@ -8,7 +8,7 @@
   tags:
     - go
 
-- name: Remove old version of Go
+- name: remove old version of go
   file:
     path: /usr/local/go
     state: absent
@@ -16,7 +16,7 @@
   tags:
     - go
 
-- name: Install Go
+- name: install go
   unarchive:
     src: "https://storage.googleapis.com/golang/go{{ go_version }}.darwin-amd64.tar.gz"
     dest: /usr/local

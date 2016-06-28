@@ -1,12 +1,12 @@
 ---
-- name: Install ack
+- name: install ack
   homebrew:
     name: ack
     state: latest
   tags:
     - pkg
 
-- name: Install ~/.ackrc
+- name: install ~/.ackrc
   copy:
     src: ackrc
     dest: ~/.ackrc

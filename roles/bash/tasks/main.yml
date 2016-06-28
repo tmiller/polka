@@ -1,5 +1,5 @@
 ---
-- name: Install bash
+- name: install bash
   homebrew:
     name: bash
     state: latest
@@ -7,7 +7,7 @@
     - bash
     - pkg
 
-- name: Install bash-completion
+- name: install bash-completion
   homebrew:
     name: bash-completion
     state: latest
@@ -15,21 +15,21 @@
     - bash
     - pkg
 
-- name: Create ~/.autoload
+- name: create ~/.autoload
   file:
     name: ~/.autoload
     state: directory
   tags:
     - bash
 
-- name: Install ~/.bash_profile
+- name: install ~/.bash_profile
   copy:
     src: bash_profile
     dest: ~/.bash_profile
   tags:
     - bash
 
-- name: Install ~/.bashrc
+- name: install ~/.bashrc
   copy:
     src: bashrc
     dest: ~/.bashrc

@@ -1,19 +1,19 @@
 ---
-- name: Install chruby
+- name: install chruby
   homebrew:
     name: chruby
     state: latest
   tags:
     - pkg
 
-- name: Install ruby-install
+- name: install ruby-install
   homebrew:
     name: ruby-install
     state: latest
   tags:
     - pkg
 
-- name: Install configuration for rubygems
+- name: install configuration for rubygems
   copy:
     src: gemrc
     dest: ~/.gemrc

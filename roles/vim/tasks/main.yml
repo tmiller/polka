@@ -1,5 +1,5 @@
 ---
-- name: Install Vim
+- name: install vim
   homebrew:
     name: vim
     state: latest
@@ -7,7 +7,7 @@
     - pkg
     - vim
 
-- name: Create Directory
+- name: create directory
   file:
     name: "{{ item }}"
     state: directory
@@ -19,14 +19,14 @@
   tags:
     - vim
 
-- name: Install NeoBundle for managing vim packages
+- name: install neobundle for managing vim packages
   git:
     repo: https://github.com/Shougo/neobundle.vim.git 
     dest: ~/.vim/bundle/neobundle.vim
   tags:
     - vim
 
-- name: Install ~/.vimrc
+- name: install ~/.vimrc
   copy:
     src: vimrc
     dest: ~/.vimrc

@@ -1,5 +1,5 @@
 ---
-- name: Install git
+- name: install git
   homebrew:
     name: git
     install_options: with-brewed-curl,with-brewed-openssl
@@ -7,17 +7,17 @@
   tags:
     - pkg
 
-- name: Install ~/.cvsignore
+- name: install ~/.cvsignore
   copy:
     src: cvsignore
     dest: ~/.cvsignore
 
-- name: Install ~/.gitconfig
+- name: install ~/.gitconfig
   template:
     src: gitconfig.j2
     dest: ~/.gitconfig
 
-- name: Install bash helpers for a git prompt
+- name: install bash helpers for a git prompt
   copy:
     src: git-helpers
     dest: ~/.autoload/git-helpers

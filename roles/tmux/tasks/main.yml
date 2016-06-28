@@ -1,5 +1,5 @@
 ---
-- name: Install tmux
+- name: install tmux
   homebrew:
     name: tmux
     state: latest
@@ -7,7 +7,7 @@
     - tmux
     - pkg
 
-- name: Install reattach-to-user-namespace
+- name: install reattach-to-user-namespace
   homebrew:
     name: reattach-to-user-namespace
     state: latest
@@ -15,7 +15,7 @@
     - tmux
     - pkg
 
-- name: Install ~/.tmux.conf
+- name: install ~/.tmux.conf
   copy:
     src: tmux.conf
     dest: ~/.tmux.conf

@@ -26,4 +26,4 @@ macros, settings, and configurations you want to keep.
 2. install ansible through pip
 3. clone the project, preferably to a folder in your home directory entitled
    ~/src/github.com/tmiller/polka.
-4. cd to the directory and run `ansible-playbook polka.ini -i laptop`
+4. cd to the directory and run `ansible-playbook polka.yml -i laptop`

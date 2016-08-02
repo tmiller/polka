@@ -1,0 +1,15 @@
+username: tmiller
+go_version: 1.6.3
+home_dir: "/Users/{{ username }}"
+homebrew_packages:
+  - coreutils
+  - ctags
+  - curl
+  - jq
+  - openssl
+  - readline
+  - tree
+  - watch
+git:
+  name: Tom Miller
+  email: tmiller@eab.com

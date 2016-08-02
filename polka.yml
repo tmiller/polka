@@ -6,7 +6,7 @@
   gather_facts: false
   vars:
     username: tmiller
-    go_version: 1.6.2
+    go_version: 1.6.3
     home_dir: "/Users/{{ username }}"
     homebrew_packages:
       - coreutils

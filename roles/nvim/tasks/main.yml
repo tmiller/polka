@@ -1,0 +1,35 @@
+---
+- name: install nvim
+  homebrew:
+    name: neovim
+    state: latest
+  tags:
+    - pkg
+    - nvim
+
+- name: create directory
+  file:
+    name: "{{ item }}"
+    state: directory
+  with_items:
+    - ~/.config/nvim/bundle
+    - ~/.config/nvim/backups
+    - ~/.config/nvim/swaps
+    - ~/.config/nvim/undo
+    - ~/.config/nvim/autoload
+  tags:
+    - nvim
+
+- name: install plug for managing nvim packages
+  get_url:
+    url: https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    dest: ~/.config/nvim/autoload/plug.vim
+  tags:
+    - nvim
+
+- name: install ~/.config/nvim/init.vim
+  copy:
+    src: init.vim
+    dest: ~/.config/nvim/init.vim
+  tags:
+    - nvim

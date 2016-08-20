@@ -6,9 +6,7 @@
   gather_facts: false
 
   roles:
-    - package
     - bash
-    - tmux
     - git
     - go
     - ack
@@ -17,3 +15,5 @@
     - python
     - ansible
     - nvim
+    # - tmux
+    # - package

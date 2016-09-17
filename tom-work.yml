@@ -8,7 +8,6 @@
   roles:
     - bash
     - git
-    - go
     - ack
     - vim
     - ruby
@@ -17,3 +16,4 @@
     # - nvim
     # - tmux
     # - package
+    # - go

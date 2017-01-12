@@ -8,12 +8,7 @@
   roles:
     - bash
     - git
-    - ack
     - vim
     - ruby
     - python
     - ansible
-    # - nvim
-    # - tmux
-    # - package
-    # - go

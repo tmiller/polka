@@ -54,6 +54,8 @@ test-unit.yml
 /pkg/
 /doc/
 /cov/
+/vendor/bundle
+/exec/
 
 ##############################
 # ctags

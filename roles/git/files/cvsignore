@@ -47,6 +47,7 @@ tramp
 ##############################
 # Ruby
 ##############################
+.bundle
 .ruby-version
 .rbenv-version
 .rvmrc

@@ -2,7 +2,7 @@
 - name: install git
   homebrew:
     name: git
-    install_options: with-brewed-curl,with-brewed-openssl
+    install_options: with-curl,with-openssl
     state: latest
   tags:
     - pkg

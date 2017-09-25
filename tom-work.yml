@@ -1,14 +1,9 @@
 ---
 - name: Setup Polka
   hosts:
-    - tom-work
+    - tom
   connection: local
   gather_facts: false
 
   roles:
-    - bash
     - git
-    - vim
-    - ruby
-    - python
-    - ansible

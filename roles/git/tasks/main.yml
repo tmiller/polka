@@ -21,11 +21,3 @@
     dest: ~/.gitconfig
   tags:
     - git
-
-- name: install bash helpers for a git prompt
-  copy:
-    src: git-helpers
-    dest: ~/.autoload/git-helpers
-    mode: '0755'
-  tags:
-    - git
